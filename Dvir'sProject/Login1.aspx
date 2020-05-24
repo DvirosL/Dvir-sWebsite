@@ -90,7 +90,7 @@
             <br>
             <button href="Home.html">Login</button>
             <br> 
-            <a>Don't have an account? </a><a  style="color:darkred" href="Register.html">Register.</a>
+            <a>Don't have an account? </a><a  style="color:darkred" href="Register1.aspx">Register.</a>
 </div>
     </form>
         </div>

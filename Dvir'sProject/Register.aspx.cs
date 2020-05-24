@@ -9,13 +9,13 @@ public partial class Register : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        string db = Database.mdb;
+        string db = "Database.mdb";
         MyAdoHelperAccess.ConnectToDb(db);
 
         string uname = Request.Form["uname"];
         string fname = Request.Form["fName"];
         string lname = Request.Form["lName"];
-        string passw = Request.Form["passW"];
+        string passw = Request.Form["passw"];
         string email = Request.Form["email"];
         string bday = Request.Form["bday"];
         string gender = Request.Form["gender"];
