@@ -1,4 +1,4 @@
-﻿<link rel="stylesheet" href="StyleSheet.css">
+﻿<link rel="stylesheet" href="StyleSheet1.css">
 
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login1.aspx.cs" Inherits="login1" %>
 

@@ -1,4 +1,4 @@
-﻿<link rel="stylesheet" href="StyleSheet.css">
+﻿<link rel="stylesheet" href="StyleSheet1.css">
 <% @ Page Language="C#" AutoEventWireup="true" CodeFile="Register1.aspx.cs" Inherits="Register1" %>
 
 <!DOCTYPE html>

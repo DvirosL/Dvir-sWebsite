@@ -14,6 +14,8 @@
                 MyAdoHelperAccess.ConnectToDb(db);
                 Response.Write(MyAdoHelperAccess.printDataTableWithDelete(db, "select * from tbl_users"));
             %>
+                        <asp:Button ID="IdBox" runat="server" style="visibility: hidden" OnClick="DeleteUser"/>
+
         </div>
     </form>
 </body>
