@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class login1 : System.Web.UI.Page
 {
+    public string cAs = "";
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Page.IsPostBack)
@@ -16,9 +17,14 @@ public partial class login1 : System.Web.UI.Page
             string user = Request["uname"];
             string pass = Request["psw"];
             string sql = "select * from tbl_users where uname='" + user + "' and upass='" + pass + "';";
-            if (MyAdoHelperAccess.IsExist("Database.mdb", sql))
+            if (user == "admin" && MyAdoHelperAccess.IsExist(db, sql))
+            {
+                Response.Redirect("Delete.aspx");
+            }
+            else if (MyAdoHelperAccess.IsExist(db, sql))
             {
                 Response.Redirect("Home.html");
+                cAs = ("You're connected as "+ user);
             }
             else
             {

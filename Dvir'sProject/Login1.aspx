@@ -70,7 +70,7 @@
         <li><a href="About.html">על עצמי</a></li>
         <li><a href="Subject.html">נושא</a></li>
         <li><a href="Info.html">מידע על הנושא</a></li>
-        <li><a href="Login.html">התחבר</a></li>
+        <li><a href="Login1.aspx">התחבר</a></li>
         <li><a href="Pictures.html">תמונות</a></li>
         <li style="float:right"><a class="active" href="Home.html">דף הבית</a></li>
     </ul>

@@ -21,10 +21,10 @@ public partial class Register : System.Web.UI.Page
         string gender = Request.Form["gender"];
         string phone = Request.Form["phone"];
         string sql = "Select * from tbl_users where UserName='" + uname + "'";
-        if (MyAdoHelperAccess.IsExist(db, sql))
+        if (MyAdoHelperAccess.IsExist(sql))
         {
             Response.Write("Username alreay exists");
-            Response.AddHeader("REFRESH", "2;URL=Register.html");
+            Response.AddHeader("REFRESH", "2;URL=Register1.aspx");
         }
         else
         {

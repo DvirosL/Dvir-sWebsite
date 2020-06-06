@@ -1,7 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Register1.aspx.cs" Inherits="_Default" %>
+﻿<link rel="stylesheet" href="StyleSheet.css">
+<% @ Page Language="C#" AutoEventWireup="true" CodeFile="Register1.aspx.cs" Inherits="Register1" %>
 
 <!DOCTYPE html>
-<link rel="stylesheet" href="StyleSheet.css">
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
         <script type="text/javascript">
@@ -83,7 +84,7 @@
                 document.getElementById("passw").style.backgroundColor = "red";
                 msg = false;
             }
-            else if (document.getElementById("password").value != "") {
+            else {
                 var CharCount = 0;
                 var NumCount = 0;
                 for (i = 0; i < document.getElementById("passw").value.length; i++) {
@@ -100,7 +101,6 @@
                     msg = false;
                 }
             }
-
             if (document.getElementById("conpassw").value == "") {
                 document.getElementById("error").innerHTML += "Don't forget to Enter a password confirmation<br />";
                 document.getElementById("conpassw").style.backgroundColor = "red";
@@ -122,15 +122,14 @@
             else if (isNaN(document.getElementById("phone").value) == true) {
                 document.getElementById("error").innerHTML += "Your phone number can only contain numbers </br>";
                 document.getElementById("phone").style.backgroundColor = "red";
-                msg++;
+                msg = false;
             }
             else if (document.getElementById("phone").value.length != 10) {
                 document.getElementById("error").innerHTML += "Your phone can only be 10 numbers long</br>";
                 document.getElementById("phone").style.backgroundColor = "red";
-                msg++;
-            }
-
-            if (document.getElementById("age").value == null) {
+                msg = false;
+                }
+            if (document.getElementById("age").value == "") {
                 document.getElementById("error").innerHTML += "Don't forget to Enter a date<br />";
                 document.getElementById("age").style.backgroundColor = "red";
                 msg = false;
@@ -171,7 +170,7 @@
         <li style="float:right"><a class="active" href="Home.html">דף הבית</a></li>
     </ul>
     <h1> Register Into the Maracas </h1>
-    <form id="register" runat="server" name="register" onsubmit="return IsValidreg()" action="Register1.aspx" method="post">
+    <form id="register" runat="server" name="register" onsubmit="return IsValidreg()"  method="post">
         <div class="RegisterStyle" style="text-align:center">
             <p2> Enter your name </p2>
             <br/>
@@ -194,14 +193,14 @@
             <p2> Enter your gender </p2>
             <br>
             <a>Male</a>
-            <input type="checkbox" name=“gender” value=“Male” id="male"/>
+            <input type="radio" name=“gender” value=“Male” id="male"/>
             <a>Female</a>
-            <input type="checkbox" name=“gender” value=“Female” id="female"/>
+            <input type="radio" name=“gender” value=“Female” id="female"/>
             <br>
             <br>
             <p2>Enter Your Birthday</p2>
             <br>
-            <input type="date" name="age" id="age"/>
+            <input type="date" name="age" id="age" min="1900-01-01" max="2020-12-31"/>
             <br>
             <p2>Enter your phone number</p2>
             <br>
@@ -211,7 +210,7 @@
             <input type="checkbox" name="Accept" id="Accept"/>
             <br>
             <input type="submit" name="submit" id="submit">
-            <input type="reset"/>
+            <input type="reset" onclick="Reset()"/>
             <div class="error" id="error"></div>
         </div>
     </form>

@@ -53,10 +53,7 @@
         }
 
 body {
-    background-image: url("http://www.itl.cat/pics/b/31/314555_background-wallpaper-hd.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-color: aqua;
 }
 
 h1 {

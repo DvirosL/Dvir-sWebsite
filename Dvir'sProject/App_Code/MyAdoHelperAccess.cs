@@ -20,7 +20,7 @@ using System.Collections.Generic;
 
 public class MyAdoHelperAccess
 {
-    static string fileName = "Database.mdb";
+    public static string fileName = "Database.mdb";
     public MyAdoHelperAccess()
     {
         //
