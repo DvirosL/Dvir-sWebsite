@@ -9,14 +9,18 @@ public partial class Delete : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        string db = "Database.mdb";
+        MyAdoHelperAccess.ConnectToDb(db);
+        contentDiv.InnerHtml = MyAdoHelperAccess.printDataTableWithDelete(db, "Select * from tbl_users");
     }
     protected void DeleteUser(object sender, EventArgs e)
     {
-        int id = int.Parse(Request["IdBox"]);
         string db = "Database.mdb";
+        int id = int.Parse(Request["nameBoxHidden"]);
         MyAdoHelperAccess.ConnectToDb(db);
-        string sql = "delete from tbl_users where id = " + int.Parse(Request["IdBox"]) + ";";
-        MyAdoHelperAccess.DoQuery(db, "delete from tbl_users where id = " + int.Parse(Request["IdBox"]) + ";");
+        string deleteQuery = "DELETE FROM [tbl_users] WHERE id = " + id + ";";
+        MyAdoHelperAccess.DoQuery(db, deleteQuery);
+        Response.Redirect(Request.RawUrl);
+
     }
 }

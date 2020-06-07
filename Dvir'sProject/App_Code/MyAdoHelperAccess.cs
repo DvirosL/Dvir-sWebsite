@@ -165,10 +165,7 @@ public class MyAdoHelperAccess
 
                     printStr += "<td>" + myItemArray.ToString() + "</td>";
                 }
-
-                printStr += "<td><button onclick='changeValue(" + row["id"].ToString() + ")'>delete</></td>";
-
-
+                printStr += "<td><button onclick='postToServer(" + row["id"].ToString() + ")'>delete</></td>";
 
                 printStr += "</tr>";
             }

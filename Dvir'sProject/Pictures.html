@@ -1,43 +1,36 @@
 ﻿<link rel="stylesheet" href="StyleSheet1.css">
 <!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="utf-8" />
     <title>אלבום תמונות</title>
     <script type="text/javascript">
         var imgnum = 1;
-        function PrevBand()
-        {
+        function PrevBand() {
             var img = document.getElementById("img")
-            if (imgnum < 3)
-            {
+            if (imgnum < 3) {
                 imgnum++;
 
-                if (imgnum == 2)
-                {
+                if (imgnum == 2) {
                     img.src = "http://www.moozing.co.il/ckfinder/userfiles/images/Artists/Arctic%20Monkeys/AM_post_pic.jpg";
                 }
-                if (imgnum == 3)
-                {
+                if (imgnum == 3) {
                     img.src = "https://vignette.wikia.nocookie.net/disney/images/f/fc/LoveH%C3%A4ndelFull.PNG.png/revision/latest?cb=20190721232047"
                     document.getElementById("nextbandId").disabled = "disabled";
                 }
             }
             document.getElementById("prevbandId").disabled = "none";
         }
-        function NextBand()
-        {
+        function NextBand() {
             var img = document.getElementById("img");
-            if (imgnum > 1)
-            {
+            if (imgnum > 1) {
                 imgnum--;
-                if (imgnum == 1)
-                {
+                if (imgnum == 1) {
                     img.src = "https://images1.calcalist.co.il/PicServer3/2017/04/10/717480/1NL.jpg"
                     document.getElementById("prevbandId").disabled = "disabled";
                 }
-                if (imgnum == 2)
-                {
+                if (imgnum == 2) {
                     img.src = "http://www.moozing.co.il/ckfinder/userfiles/images/Artists/Arctic%20Monkeys/AM_post_pic.jpg"
                 }
 
@@ -52,7 +45,7 @@
         <li><a href="About.html">על עצמי</a></li>
         <li><a href="Subject.html">נושא</a></li>
         <li><a href="Info.html">מידע על הנושא</a></li>
-        <li><a href="Login1.aspx"">התחבר</a></li>
+        <li><a href="Login1.aspx" ">התחבר</a></li>
         <li><a href="Pictures.html">תמונות</a></li>
         <li style="float:right"><a class="active" href="Home.html">דף הבית</a></li>
     </ul>
